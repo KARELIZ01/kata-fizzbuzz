@@ -1,17 +1,21 @@
 package katafizzbuzz;
 
-/**
- * Hello world!
- */
-public final class App {
-    private App() {
+public class App {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(fizzBuzz(i));
+        }
     }
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    public static String fizzBuzz(int number) {
+        if (number % 3 == 0 && number % 5 == 0) {
+            return "FizzBuzz";
+        } else if (number % 3 == 0) {
+            return "Fizz";
+        } else if (number % 5 == 0) {
+            return "Buzz";
+        } else {
+            return String.valueOf(number);
+        }
     }
 }
